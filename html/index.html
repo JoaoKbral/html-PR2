@@ -10,8 +10,9 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/sb-admin-2.min.css " />
+    <!-- <link rel="stylesheet" href="/css/sb-admin-2.min.css " /> -->
 
+    <link rel="stylesheet" href="/css/tabs_style.css">
     <style>
       #main_content .hidden_desc {
         display: none;
@@ -21,15 +22,23 @@
   </head>
 
   <body onload="page_open()">
-    <div class="container border border-gray rounded-2 mt-3 pb-3">
-      <div class="row">
-        <div class="col-12 justify-content-start">
+    <div class="container border border-dark rounded-2 mt-3 pt-3 pb-4 theme">
+      <div class="row theme justify-content-around">
+        
+        <div class="col">
           <!--Nome da pool-->
           <h2 class="text-gray-800">Pool reunião</h2>
         </div>
+
+        <div class="col-1 justify-content-end">
+          <button class="btn-success btn-sm" onclick="color_theme()">
+            O
+          </button>
+        </div>
+
       </div>
 
-      <div class="row justify-content-start">
+      <div class="row justify-content-start theme">
         <div class="col">
           <form action="">
             <button class="btn btn-success" href="#">Edit</button>
@@ -41,7 +50,7 @@
         </div>
       </div>
 
-      <div class="content-wrapper" id="main_content">
+      <div class="content-wrapper theme" id="main_content">
         <ul>
           <li
             class="selected btn btn-info"
@@ -60,19 +69,17 @@
         </ul>
 
         <div class="hidden_desc" id="page1_desc">
-          <div class="card">
-            <div class="card-header"><h2>Tabela de pool</h2></div>
+          <div class="card theme">
+            <div class="card-header theme"><h2 class="theme">Tabela de pool</h2></div>
 
             <div class="card-body">
-              
-              <table class="table" aria-label=".">
+              <table class="table theme" aria-label=".">
                 <thead>
                   <tr>
                     <th></th>
                   </tr>
                 </thead>
               </table>
-
             </div>
           </div>
         </div>
@@ -80,27 +87,34 @@
         <div class="hidden_desc" id="page2_desc">
           <div class="card">
             <div class="card-header"><h2>Admin</h2></div>
-              
-            <div class="card-body">
 
+            <div class="card-body">
               <form class="form" action="">
-                
-                  <label for="start_date">Data de início</label>
-              <input class="form-control" type="text" name="start_date" id="start_date">
-      
-              <label for="end_date">Data de fim</label>
-              <input class="form-control" type="text" name="end_date" id="end_date">
-      
-                <button type="submit" class="btn btn-info">Adicionar data</button>
+                <label for="start_date">Data de início</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="start_date"
+                  id="start_date"
+                />
+
+                <label for="end_date">Data de fim</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="end_date"
+                  id="end_date"
+                />
+
+                <button type="submit" class="btn btn-info">
+                  Adicionar data
+                </button>
               </form>
-      
             </div>
           </div>
         </div>
 
-        <div id="page_content" >
-          
-        </div>
+        <div class="theme" id="page_content"></div>
       </div>
     </div>
 
