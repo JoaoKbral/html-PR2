@@ -20,8 +20,8 @@
     </style>
   </head>
 
-  <body>
-    <div class="container">
+  <body onload="page_open()">
+    <div class="container border border-gray rounded-2 mt-3 pb-3">
       <div class="row">
         <div class="col-12 justify-content-start">
           <!--Nome da pool-->
@@ -41,56 +41,65 @@
         </div>
       </div>
 
-      <div class="row"></div>
-
-      <div class="row"></div>
-
       <div class="content-wrapper" id="main_content">
-        <li
-          class="selected btn btn-info"
-          id="page1"
-          onclick="change_tab(this.id);"
-        >
-          Tabela
-        </li>
-        <li
-          class="notselected btn btn-info"
-          id="page2"
-          onclick="change_tab(this.id);"
-        >
-          Administrador
-        </li>
+        <ul>
+          <li
+            class="selected btn btn-info"
+            id="page1"
+            onclick="change_tab(this.id);"
+          >
+            Tabela
+          </li>
+          <li
+            class="notselected btn btn-info"
+            id="page2"
+            onclick="change_tab(this.id);"
+          >
+            Administrador
+          </li>
+        </ul>
 
         <div class="hidden_desc" id="page1_desc">
           <div class="card">
             <div class="card-header"><h2>Tabela de pool</h2></div>
 
             <div class="card-body">
-                <table class="table">
-                    
-                </table>
-                
-                <form action="">
+              
+              <table class="table" aria-label=".">
+                <thead>
+                  <tr>
+                    <th></th>
+                  </tr>
+                </thead>
+              </table>
 
-                </form>
             </div>
           </div>
         </div>
 
         <div class="hidden_desc" id="page2_desc">
-            <div class="card">
-                <div class="card-header"><h2>Admin</h2></div>
-    
-                <div class="card-body"></div>
-              </div>
+          <div class="card">
+            <div class="card-header"><h2>Admin</h2></div>
+              
+            <div class="card-body">
+
+              <form class="form" action="">
+                
+                  <label for="start_date">Data de início</label>
+              <input class="form-control" type="text" name="start_date" id="start_date">
+      
+              <label for="end_date">Data de fim</label>
+              <input class="form-control" type="text" name="end_date" id="end_date">
+      
+                <button type="submit" class="btn btn-info">Adicionar data</button>
+              </form>
+      
+            </div>
+          </div>
         </div>
 
-        <div id="page_content">
-          <div class="card">
-            <div class="card-header"><h2>Tabela de pool</h2></div>
-
-            <div class="card-body"></div>
-          </div>
+        <div id="page_content" >
+          
         </div>
       </div>
     </div>
@@ -100,6 +109,6 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
-    <script src="js/scrip.js"></script>
+    <script src="/js/scrip.js"></script>
   </body>
 </html>

@@ -1,0 +1,6 @@
+{
+    "liveServer.settings.port": 5501,
+    "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "editor.tabSize": 8,
+    "workbench.tree.indent": 8
+}
